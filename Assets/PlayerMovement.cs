@@ -34,10 +34,10 @@ namespace BackstageVRApp
             if (iswalking)
             {
                 PlayerMoveForward();
-                isRotating = true;
+                
             }
                
-            if(comfortMode && isRotating && !iswalking)
+            if(comfortMode && camRotateDegrees>0 && !iswalking)
             {
                 OnCamRotateEnable();
             }
@@ -68,16 +68,20 @@ namespace BackstageVRApp
             {
                 CamSnapRotation(-camRotateDegrees);
             }
-            else if(horizontalAxis==0)
+            else 
             {
-                isRotating = true;
+                isRotating = false;
             }
         }
 
         void CamSnapRotation(float degrees)
         {
-            transform.Rotate(0, degrees, 0);
-            isRotating = false;
+            if (!isRotating)
+            {
+                transform.Rotate(0, degrees, 0);
+                isRotating = true;
+            }
+           
         }
 
     }
