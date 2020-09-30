@@ -7,9 +7,11 @@ public class VRgazeTeleport : MonoBehaviour
 {
     public Image gazeImage;
     public float gazeTimer;
-    public bool gazeStatus;
+    public bool gazeStatus=false;
     public float gazeTotaltime=2f;
-   
+    [SerializeField]
+    int distanceToRay = 5;
+    RaycastHit hit;
 
     // Update is called once per frame
     void Update()
@@ -19,10 +21,12 @@ public class VRgazeTeleport : MonoBehaviour
             gazeTimer += Time.deltaTime;
             gazeImage.fillAmount = gazeTimer / gazeTotaltime;
         }
-        else
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        if(Physics.Raycast(ray, out hit, distanceToRay))
         {
 
         }
+        
     }
 
    public void OnGazeEnter()
@@ -33,6 +37,6 @@ public class VRgazeTeleport : MonoBehaviour
     {
         gazeStatus = false;
         gazeTimer = 0;
-        gazeImage.fillAmount = gazeTimer / gazeTotaltime;
+        gazeImage.fillAmount = 0;
     }
 }

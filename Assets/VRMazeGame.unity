@@ -301,9 +301,10 @@ GameObject:
   - component: {fileID: 406977558}
   - component: {fileID: 406977557}
   - component: {fileID: 406977561}
+  - component: {fileID: 406977562}
   m_Layer: 0
   m_Name: TeleportWaypoint2
-  m_TagString: Untagged
+  m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -425,6 +426,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &406977562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406977556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28587ca2ee06bc341b224f767ebc1d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &450739635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,9 +1057,10 @@ GameObject:
   - component: {fileID: 831147393}
   - component: {fileID: 831147392}
   - component: {fileID: 831147396}
+  - component: {fileID: 831147397}
   m_Layer: 0
   m_Name: TeleportWaypoint3
-  m_TagString: Untagged
+  m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1167,6 +1182,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &831147397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831147391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28587ca2ee06bc341b224f767ebc1d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1 &1131282378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,9 +1208,10 @@ GameObject:
   - component: {fileID: 1131282380}
   - component: {fileID: 1131282379}
   - component: {fileID: 1131282383}
+  - component: {fileID: 1131282384}
   m_Layer: 0
   m_Name: TeleportWaypoint1
-  m_TagString: Untagged
+  m_TagString: Teleport
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1255,7 +1284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131282378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.93, y: 0.17, z: -10.82}
+  m_LocalPosition: {x: -3.93, y: 0, z: -10.82}
   m_LocalScale: {x: 1, y: 0.08630704, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1304,6 +1333,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1131282384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1131282378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28587ca2ee06bc341b224f767ebc1d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2034484345}
 --- !u!1001 &1415235939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1980,6 +2022,7 @@ MonoBehaviour:
   gazeTimer: 0
   gazeStatus: 0
   gazeTotaltime: 2
+  distanceToRay: 5
 --- !u!1001 &2110435808
 PrefabInstance:
   m_ObjectHideFlags: 0
